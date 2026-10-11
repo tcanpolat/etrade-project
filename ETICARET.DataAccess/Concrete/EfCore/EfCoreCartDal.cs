@@ -11,7 +11,7 @@ namespace ETICARET.DataAccess.Concrete.EfCore
 {
     public class EfCoreCartDal : EfCoreGenericRepository<Cart, DataContext>, ICartDal
     {
-        public void ClearCart(int cartId)
+        public void ClearCart(string cartId)
         {
             using (var context = new DataContext())
             {

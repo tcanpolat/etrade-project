@@ -9,8 +9,8 @@ namespace ETICARET.DataAccess.Abstract
 {
     public interface ICartDal : IRepository<Cart>
     {
-        void ClearCart(int cartId);
-        void DeleteFromCart(int cartId,int productId);
+        void ClearCart(string cartId);
+        void DeleteFromCart(int userId,int productId);
         Cart GetCartByUserId(string userId);
     }
 }
