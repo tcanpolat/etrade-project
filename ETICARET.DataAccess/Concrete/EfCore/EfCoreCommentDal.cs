@@ -1,4 +1,4 @@
-﻿,using ETICARET.DataAccess.Abstract;
+﻿using ETICARET.DataAccess.Abstract;
 using ETICARET.Entities;
 using System;
 using System.Collections.Generic;

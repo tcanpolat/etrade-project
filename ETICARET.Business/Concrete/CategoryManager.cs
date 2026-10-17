@@ -44,7 +44,7 @@ namespace ETICARET.Business.Concrete
 
         public Category GetByWithProducts(int id)
         {
-            return _categoryDal.GetByWithProducts(id);
+            return _categoryDal.GetByIdWithProducts(id);
         }
 
         public void Update(Category entity)

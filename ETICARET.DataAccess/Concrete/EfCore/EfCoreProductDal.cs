@@ -112,7 +112,7 @@ namespace ETICARET.DataAccess.Concrete.EfCore
             {
                 return filter == null
                         ? context.Products.Include("Images").ToList()
-                        : context.Products.Include("Images").Where(filter).ToList()
+                        : context.Products.Include("Images").Where(filter).ToList();
             }
         }
     }
