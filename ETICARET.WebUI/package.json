@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "name": "ETICARET",
+  "private": true,
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "jquery-validation": "^1.19.3",
+    "jquery-validation-unobtrusive": "^3.2.12",
+    "ckeditor4": "^4.21.1"
+  }
+}

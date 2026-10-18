@@ -1,3 +1,6 @@
+using ETICARET.Business.Abstract;
+using ETICARET.Entities;
+using ETICARET.WebUI.Extensions;
 using ETICARET.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -5,10 +8,30 @@ using System.Diagnostics;
 namespace ETICARET.WebUI.Controllers
 {
     public class HomeController : Controller
-    {     
+    {   private readonly IProductService _productService;
+        private readonly ICartService _cartService;
+
+        public HomeController(IProductService productService, ICartService cartService)
+        {
+            _cartService = cartService;
+            _productService = productService;
+        }
         public IActionResult Index()
         {
-            return View();
+            var products = _productService.GetAll();
+
+            if(products == null || !products.Any())
+            {
+                products = new List<Product>();
+            }
+
+            return View(
+               new ProductListModel
+               {
+                   Products = products
+               }
+
+            );
         }       
     }
 }

@@ -8,8 +8,8 @@
         public string City { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public string? CartName { get; set; }
-        public string? CartNumber { get; set; }
+        public string? CardName { get; set; }
+        public string? CardNumber { get; set; }
         public string? ExprationMonth { get; set; }
         public string? ExprationYear { get; set; }
         public string? CVV { get; set; }

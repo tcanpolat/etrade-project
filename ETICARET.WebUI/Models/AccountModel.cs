@@ -1,6 +1,8 @@
-﻿namespace ETICARET.WebUI.Models
+﻿using ETICARET.WebUI.Identity;
+
+namespace ETICARET.WebUI.Models
 {
-    public class AccountModel
+    public class AccountModel : ApplicationUser
     {
         public string FullName { get; set; }
         public string Email { get; set; }

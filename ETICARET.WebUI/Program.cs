@@ -2,7 +2,9 @@ using ETICARET.Business.Abstract;
 using ETICARET.Business.Concrete;
 using ETICARET.DataAccess.Abstract;
 using ETICARET.DataAccess.Concrete.EfCore;
+using ETICARET.WebUI.Extensions;
 using ETICARET.WebUI.Identity;
+using ETICARET.WebUI.Middlewares;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -92,7 +94,7 @@ if (!app.Environment.IsDevelopment())
 SeedDatabase.Seed(); // seed işlemi yapılıyor(Product,Categories)
 
 app.UseStaticFiles();
-// Custom static file
+app.CustomStaticFiles();
 app.UseHttpsRedirection();
 app.UseAuthentication(); // identity için authentication middleware ekleniyor
 app.UseAuthorization(); // identity için authorization middleware ekleniyor
