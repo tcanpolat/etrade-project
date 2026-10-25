@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ETICARET.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20261010075608_dalmigration")]
+    [Migration("20261025073859_dalmigration")]
     partial class dalmigration
     {
         /// <inheritdoc />
@@ -33,8 +33,9 @@ namespace ETICARET.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
